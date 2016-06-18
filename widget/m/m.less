@@ -1,0 +1,106 @@
+@import "variables.less";
+@import "grid.less";
+@import "iconfont.less";
+@import "iconpic.less";
+@import "helpers.less";
+@import "form.less";
+@import "/widget/common/animate/animate.less";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+body, button, input, select, textarea {
+    
+    font: 12px/1.5 STHeiTi, "Microsoft Yahei", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+a {
+	color: lighten(@default-text-color, -10%);
+	text-decoration: none;
+	.transition(all .1s);
+	
+	&:hover {
+		color: lighten(@logo-color, 10%);
+	}
+}
+
+input, button {
+	outline:  none;
+}
+
+button {
+    .user-select(none);
+}
+
+.schollable {
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #000;
+        background-color: rgba(0,0,0,.26);
+    }
+}
+
+//clear float
+.clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+		// Fixes Opera/contenteditable bug:
+		// http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+		line-height: 0;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.hidden {
+    display: none;
+}
+
+.button-s1 {
+    background-color: @button-color;
+    color: #fff;
+    .transition(background-color .1s);
+    &:hover {
+        background-color: @button-hover-color;
+    }
+}
+
+.button-s2 {
+    background-color: @logo-color;
+    color: #fff;
+    .transition(background-color .1s);
+    &:hover {
+        background-color: @button-hover-logo-color-1;
+    }
+}
+
+.dropdown-wrapper {
+    position: relative;
+    
+    .dropdown-panel {
+        display: none;
+    }
+    
+    &:hover {
+        .dropdown-panel {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            .fadeInDown;
+            -webkit-animation-duration: .4s;
+            -moz-animation-duration: .4s;
+            animation-duration: .4s;
+        }
+    }
+}

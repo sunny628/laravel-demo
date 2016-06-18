@@ -1,0 +1,126 @@
+@import "variables.less";
+html, body {
+	min-width: @max-width;
+}
+
+
+.row-m {
+	width: @max-width;
+	margin: 0 auto; 
+    position: relative;
+}
+.row {
+    display: block;
+    *zoom: 1;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+		line-height: 0;
+	}
+	&:after {
+		clear: both;
+	}
+}
+.col-l {
+	float: left;
+}
+
+.col-r {
+	float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+}
+
+.col-md-12 {
+    width: 100%;
+}
+
+.col-md-11 {
+    width: 91.66666667%;
+}
+
+.col-md-10 {
+    width: 83.33333333%;
+}
+
+.col-md-9 {
+    width: 75%;
+}
+
+.col-md-8 {
+    width: 66.66666667%;
+}
+
+.col-md-7 {
+    width: 58.33333333%;
+}
+
+.col-md-6 {
+    width: 50%;
+}
+
+.col-md-5 {
+    width: 41.66666667%;
+}
+
+.col-md-4 {
+    width: 33.33333333%;
+}
+
+.col-md-3 {
+    width: 25%;
+}
+
+.col-md-2 {
+    width: 16.66666667%;
+}
+
+.col-md-1 {
+    width: 8.33333333%;
+}
+
+.table {
+    display: table;
+    table-layout: fixed;
+    
+    .table-row {
+        display: table-row;
+    }
+    
+    .table-cell {
+        display: table-cell;
+    }
+}
+
+
+
+@media screen and (max-width: @max-width) {
+    .row-m {
+        margin: 0 auto;
+        width: @w970-width;
+    }
+    html, body {
+        min-width: @w970-width;
+    }
+}
+
+// @media screen and (max-width: @w970-width) {
+//     .row-m {
+//         margin: 0 auto;
+//         width: @w640-width;
+//     }
+//     html, body {
+//         min-width: @w640-width;
+//     }
+// }
